@@ -1,0 +1,18 @@
+{
+  "name": "pcr-arena-api",
+  "cwd": "/app",
+  "instance": 2,
+  "exec_mode": "cluster",
+  "script": "/app/dist/main.js",
+  "log_type": "json",
+  "merge_logs": true,
+  "restart_delay": 4000,
+  "wait_ready": false,
+  "interpreter": "node",
+  "out_file": "/dev/null",
+  "log_file": "/dev/null",
+  "error_file": "/dev/null",
+  "log_date_format": "YYYY-MM-DD HH:mm:ss",
+  "max_restarts": 10,
+  "autorestart": true
+}

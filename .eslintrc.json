@@ -1,0 +1,41 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint/eslint-plugin"],
+  "extends": [
+    "eslint:recommended",
+    "airbnb-base",
+    "airbnb-typescript/base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:jest/recommended",
+    "plugin:promise/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "root": true,
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "rules": {
+    "class-methods-use-this": "off",
+    "import/prefer-default-export": "off",
+    "jest/expect-expect": [
+      "error",
+      {
+        "assertFunctionNames": ["expect", "request.**.expect"]
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "never",
+        "groups": ["builtin", "external", "internal"],
+        "warnOnUnassignedImports": true
+      }
+    ]
+  }
+}

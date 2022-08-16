@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  # PostgreSQL
+  postgres:
+    image: postgres:14
+    environment:
+      - 'POSTGRES_USER=user'
+      - 'POSTGRES_PASSWORD=example'
+      - 'POSTGRES_DB=pcr.arena'
+      - 'PGDATA=/var/lib/postgresql/data/pgdata'
+    ports:
+      - '${PG_PORT:-5432}:5432'
+    volumes:
+      - ./.docker/postgres/data:/var/lib/postgresql/data

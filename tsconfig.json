@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "ts-node": {
+    "files": true
+  },
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "CommonJS",
+    "declaration": true,
+    "removeComments": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "noEmit": false,
+    "incremental": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+
+    /* Strict Type-Checking Options */
+    "strict": true /* Enable all strict type-checking options. */,
+
+    /* Additional Checks */
+    "noUnusedLocals": true /* Report errors on unused locals. */,
+    "noUnusedParameters": true /* Report errors on unused parameters. */,
+    "noImplicitReturns": true /* Report error when not all code paths in function return a value. */,
+
+    /* Experimental Options */
+    "experimentalDecorators": true /* Enables experimental support for ES7 decorators. */,
+    "emitDecoratorMetadata": true /* Enables experimental support for emitting type metadata for decorators. */,
+
+    // Path Mappings
+    "paths": {
+      "@common/*": ["./src/common/*"],
+      "@commands/*": ["./src/commands/*"],
+      "@config/*": ["./src/config/*"],
+      "@modules/*": ["./src/modules/*"],
+      "@libraries/*": ["./src/libraries/*"],
+      "@src/*": ["./src/*"],
+      "@test/*": ["./test/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "test/**/*.ts"],
+  "exclude": ["node_modules"],
+  "plugins": [
+    // Transform paths in output .js files
+    { "transform": "typescript-transform-paths" },
+
+    // Transform paths in output .d.ts files (Include this line if you output declarations files)
+    { "transform": "typescript-transform-paths", "afterDeclarations": true }
+  ]
+}
