@@ -12,7 +12,7 @@ export const createSwaggerDocument = (app: INestApplication) => {
     .setTitle(SWAGGER_API_NAME)
     .setDescription(SWAGGER_API_DESCRIPTION)
     .setVersion(SWAGGER_API_CURRENT_VERSION)
-    .addBearerAuth()
+    .addApiKey({ type: 'apiKey', name: 'X-API-KEY', in: 'header' }, 'X-API-KEY')
     .build();
   return SwaggerModule.createDocument(app, config);
 };

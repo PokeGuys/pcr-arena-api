@@ -9,7 +9,8 @@ export class RetrieveProfileDto {
   @IsNotEmpty()
   @ApiProperty({
     description: 'The server the account is for',
-    enum: Server,
+    // Quick fix for @nestjs/swagger#1884
+    enum: [Server.GourmetEdifice, Server.MahoMahoKindom, Server.TwinkleWish, Server.LittleLyrical],
     example: Server.GourmetEdifice,
   })
   @Type(() => Number)

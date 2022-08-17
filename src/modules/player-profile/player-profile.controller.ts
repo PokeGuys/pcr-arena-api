@@ -1,5 +1,5 @@
 import { Controller, Get, Query, UseGuards } from '@nestjs/common';
-import { ApiOkResponse, ApiOperation, ApiTags } from '@nestjs/swagger';
+import { ApiOkResponse, ApiOperation, ApiSecurity, ApiTags } from '@nestjs/swagger';
 import { ApiKeyGuard } from '@common/guards';
 import { PlayerProfileDto, RetrieveProfileDto } from './dtos';
 import { PlayerProfileService } from './player-profile.service';
@@ -7,6 +7,7 @@ import { PlayerProfileService } from './player-profile.service';
 @ApiTags('Player')
 @Controller('players')
 @UseGuards(ApiKeyGuard)
+@ApiSecurity('X-API-KEY')
 export class PlayerProfileController {
   constructor(private readonly playerService: PlayerProfileService) {}
 
