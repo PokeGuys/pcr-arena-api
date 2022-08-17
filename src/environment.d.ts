@@ -11,6 +11,7 @@ declare global {
       APP_NAME: string;
       APP_PREFIX?: string;
       APP_HOST: string;
+      API_KEY: string;
       FALLBACK_LANGUAGE?: Language;
 
       DB_HOST: string;

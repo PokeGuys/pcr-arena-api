@@ -10,6 +10,7 @@ export type AppConfig = {
   prefix?: string;
   env: AppEnvironment;
   host: string;
+  apiKey: string;
   version: VersionInfo;
   versioningOptions?: VersioningOptions;
   corsOptions?: CorsOptions;

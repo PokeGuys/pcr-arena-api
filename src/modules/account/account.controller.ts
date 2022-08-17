@@ -1,10 +1,12 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Post, UseGuards } from '@nestjs/common';
 import { ApiCreatedResponse, ApiOperation, ApiTags } from '@nestjs/swagger';
+import { ApiKeyGuard } from '@common/guards';
 import { AddAccountDto } from './dtos';
 import { AccountService } from './account.service';
 
 @ApiTags('Account')
 @Controller('accounts')
+@UseGuards(ApiKeyGuard)
 export class AccountController {
   constructor(private readonly accountService: AccountService) {}
 
