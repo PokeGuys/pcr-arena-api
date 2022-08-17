@@ -26,6 +26,10 @@ class EnvironmentVariables {
 
   @IsString()
   @IsNotEmpty()
+  public readonly API_KEY!: string;
+
+  @IsString()
+  @IsNotEmpty()
   public readonly APP_NAME!: string;
 
   @IsString()

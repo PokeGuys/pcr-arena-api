@@ -35,6 +35,7 @@ export const appConfig = registerAs(APP_CONFIG_NAMESPACE, (): AppConfig => {
     prefix: process.env.APP_PREFIX,
     env: process.env.APP_ENV || AppEnvironment.Production,
     host: process.env.APP_HOST,
+    apiKey: process.env.API_KEY,
     version: {
       build: versionInfo?.build || UNKNOWN,
       commit: versionInfo?.commit || UNKNOWN,
