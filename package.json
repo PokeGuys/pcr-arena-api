@@ -59,7 +59,7 @@
     "mongoose": "6.5.2",
     "msgpack-lite": "0.1.26",
     "nestjs-command": "3.1.2",
-    "nestjs-i18n": "9.1.5",
+    "nestjs-i18n": "9.1.6",
     "nestjs-pino": "3.1.1",
     "p-throttle": "4.1.1",
     "pino": "8.4.1",
