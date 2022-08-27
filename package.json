@@ -80,7 +80,7 @@
     "@nestjs/cli": "9.0.0",
     "@nestjs/schematics": "9.0.1",
     "@nestjs/testing": "9.0.11",
-    "@types/jest": "28.1.7",
+    "@types/jest": "28.1.8",
     "@types/msgpack-lite": "0.1.8",
     "@types/node": "18.7.2",
     "@types/ramda": "0.28.15",
