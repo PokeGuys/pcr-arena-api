@@ -1,5 +1,5 @@
 # Install Stage
-FROM node:16-alpine AS installer
+FROM node:18-alpine AS installer
 
 ## Create app directory
 WORKDIR /app
@@ -13,7 +13,7 @@ RUN yarn --production
 COPY . .
 
 # Builder Stage
-FROM node:16-alpine AS builder
+FROM node:18-alpine AS builder
 
 ## Create app directory
 WORKDIR /app
@@ -33,7 +33,7 @@ ARG CI_PIPELINE_ID
 RUN echo "{\"commit\":\"$CI_COMMIT_SHORT_SHA\",\"build\":\"$CI_PIPELINE_ID\"}" > VERSION.json
 
 # Run Stage
-FROM node:16-alpine
+FROM node:18-alpine
 
 RUN npm install -g pm2@5.1.2 && \
   npm install -g yarn@1.22.17 --force && \
