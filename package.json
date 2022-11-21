@@ -54,7 +54,7 @@
     "class-transformer": "0.5.1",
     "class-validator": "0.13.2",
     "date-fns": "2.29.3",
-    "fastify": "4.4.0",
+    "fastify": "4.10.2",
     "fastify-swagger": "5.2.0",
     "mongoose": "6.5.5",
     "msgpack-lite": "0.1.26",
